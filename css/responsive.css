@@ -1,0 +1,1218 @@
+/* =========================================================
+   TEENZIO — RESPONSIVE
+   Tablet + Mobile
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+   901px → 681px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* -----------------------------------------------------
+       GLOBAL
+    ----------------------------------------------------- */
+
+    .container {
+        width: min(calc(100% - 48px), var(--container));
+    }
+
+    .section {
+        padding: 100px 0;
+    }
+
+
+    /* -----------------------------------------------------
+       NAVBAR
+    ----------------------------------------------------- */
+
+    .navbar {
+        min-height: 78px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+        font-size: 11px;
+    }
+
+    .brand img {
+        width: 66px;
+        height: 56px;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+    .hero {
+        min-height: 100svh;
+        padding-top: 100px;
+    }
+.hero::before {
+    display: none;
+}
+.hero-kicker {
+    font-size: 9px;
+    letter-spacing: .15em;
+    margin-bottom: 28px;
+}
+
+ .hero-title {
+    font-size: clamp(42px, 12.5vw, 62px);
+    line-height: .86;
+    max-width: 100%;
+
+    position: relative;
+    z-index: 3;
+}
+.hero-title span {
+    position: relative;
+    z-index: 3;
+}
+
+    .hero-bottom {
+        max-width: 760px;
+        gap: 30px;
+    }
+
+    .hero-bottom p {
+        max-width: 480px;
+        font-size: 16px;
+    }
+
+    .hero-bottom .button-yellow {
+        transform: none;
+    }
+
+    .hero-contact-icons {
+        margin-top: 24px;
+    }
+
+
+    /* -----------------------------------------------------
+       INTRO
+    ----------------------------------------------------- */
+
+    .intro-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .intro-grid > .section-label {
+        position: static;
+        left: auto;
+        top: auto;
+    }
+
+    .intro-content {
+        max-width: none;
+        width: 100%;
+
+        background: #1c1c1c;
+        border: 1px solid #292929;
+        border-radius: 20px;
+
+        padding: 70px 70px;
+        margin-left: 0;
+    }
+
+    .intro-content h2 {
+        margin-top: 0;
+        margin-left: 0;
+        font-size: clamp(42px, 7vw, 64px);
+    }
+
+    .intro-copy {
+        max-width: 650px;
+        margin-left: auto;
+        margin-top: 70px;
+    }
+
+    .intro-copy p {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .intro-copy .lead {
+        margin-top: 0;
+        margin-right: 0;
+        font-size: 19px;
+    }
+
+/* -----------------------------------------------------
+   PROJECTS — TABLET ONLY
+----------------------------------------------------- */
+
+.projects-heading {
+    margin-bottom: 55px;
+}
+
+.projects-heading h2 {
+    font-size: clamp(48px, 7vw, 72px);
+}
+
+.projects-heading p {
+    font-size: 16px;
+}
+
+.projects-divider,
+.projectunder-divider {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Project cards — tablet */
+.project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    /* space from the left/right edges */
+    margin-left: 20px;
+    margin-right: 20px;
+
+    /* space between cards */
+    column-gap: 40px;
+    row-gap: 40px;
+
+    padding: 0;
+}
+
+.project-grid::before {
+    display: none;
+}
+
+.project-card {
+    min-width: 0;
+    width: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+}
+
+.project-image {
+    aspect-ratio: 16 / 9;
+}
+
+.project-info {
+    padding: 20px 20px 22px;
+    gap: 16px;
+}
+
+.project-info h3 {
+    font-size: clamp(32px, 4vw, 42px);
+}
+
+.project-details p {
+    font-size: 13px;
+}
+
+    
+
+
+    /* -----------------------------------------------------
+       HOW IT WORKS
+    ----------------------------------------------------- */
+
+    .split-heading {
+        grid-template-columns: 1fr 280px;
+        gap: 40px;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .step:nth-child(2) {
+        border-right: 0;
+        margin-right: 0;
+    }
+
+    .step:nth-child(3) {
+        border-top: 1px solid var(--border);
+    }
+
+    .step {
+        min-height: 300px;
+    }
+
+
+    /* -----------------------------------------------------
+       WHY TEENZIO
+    ----------------------------------------------------- */
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-card {
+        min-height: 270px;
+    }
+
+    .why-card.featured {
+        grid-column: span 2;
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+    ----------------------------------------------------- */
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 35px;
+
+    }
+
+    .about .section-label {
+        position: static;
+        left: auto;
+        top: auto;
+    }
+
+    .about-content {
+        max-width: 900px;
+    }
+
+    .about-content h2 {
+        font-size: clamp(42px, 7vw, 70px);
+    }
+
+    .about-content > p {
+        max-width: 650px;
+    }
+
+    .about-statement {
+        margin-left: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTACT
+    ----------------------------------------------------- */
+
+    .contact-inner {
+        max-width: 100%;
+    }
+
+    .contact-title {
+        font-size: clamp(52px, 8vw, 78px);
+    }
+
+    .contact-direct {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .contact-form::before {
+        left: 0;
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px;
+    }
+
+    .footer-contact {
+        grid-column: span 2;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECT DETAIL PAGES
+    ----------------------------------------------------- */
+
+    .project-hero {
+        min-height: 78svh;
+        padding: 130px 0 70px;
+    }
+
+    .project-hero h1 {
+        font-size: clamp(58px, 9vw, 105px);
+        max-width: 850px;
+    }
+
+    .project-hero p {
+        max-width: 520px;
+        font-size: 15px;
+        margin-top: 30px;
+    }
+
+    .project-section {
+        padding: 95px 0;
+    }
+
+    .project-two-col {
+        display: block;
+    }
+
+    .project-about-content > .section-label {
+        margin-bottom: 30px;
+    }
+
+    .project-two-col h2 {
+        font-size: clamp(42px, 7vw, 72px);
+    }
+
+    .project-feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 55px;
+    }
+
+    .feature-box {
+        min-height: 230px;
+        padding: 28px;
+    }
+
+    .feature-box h3 {
+        margin-top: 45px;
+    }
+
+    .project-cta h2 {
+        font-size: clamp(45px, 7vw, 68px);
+    }
+}
+
+
+
+/* =========================================================
+   MOBILE
+   680px and below
+========================================================= */
+
+@media (max-width: 680px) {
+
+    /* -----------------------------------------------------
+       GLOBAL
+    ----------------------------------------------------- */
+
+    .container {
+        width: min(calc(100% - 28px), var(--container));
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+
+    /* -----------------------------------------------------
+       NAVBAR
+    ----------------------------------------------------- */
+
+    .navbar {
+        min-height: 72px;
+        position: relative;
+    z-index: 1001;
+    }
+
+    .brand img {
+        width: 72px;
+        height: 52px;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1002;
+    }
+
+    .nav-menu {
+    position: fixed !important;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    z-index: 9998;
+
+    background: #0a0a0a;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 30px;
+
+    gap: 25px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-15px);
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease,
+        transform .35s ease;
+
+    font-size: 22px;
+}
+
+
+    .nav-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 9998;
+}
+
+    .nav-cta {
+        margin-top: 15px;
+        font-size: 11px;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+    .hero {
+        min-height: 100svh;
+        padding-top: 95px;
+        padding-bottom: 70px;
+    }
+
+    .hero::before {
+        width: 230px;
+        height: 230px;
+
+        right: -65px;
+        top: 45%;
+    }
+
+    .hero-kicker {
+        font-size: 9px;
+        letter-spacing: .15em;
+        margin-bottom: 28px;
+    }
+
+    .hero-title {
+        font-size: clamp(47px, 14vw, 72px);
+        line-height: .88;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-top: 38px;
+
+        gap: 28px;
+    }
+
+    .hero-bottom p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-bottom .button-yellow {
+        transform: none;
+    }
+
+    .hero-contact-icons {
+        gap: 12px;
+        margin-top: 22px;
+    }
+
+    .hero-contact-icons a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-contact-icons svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       INTRO
+    ----------------------------------------------------- */
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .intro-grid > .section-label {
+        position: static;
+        left: auto;
+        top: auto;
+    }
+
+    .intro-content {
+        width: 100%;
+
+        padding: 45px 24px;
+
+        margin-left: 0;
+
+        border-radius: 18px;
+    }
+
+    .intro-content h2 {
+        margin: 0;
+        font-size: clamp(38px, 11vw, 56px);
+    }
+
+    .intro-copy {
+        max-width: 100%;
+        margin: 55px 0 0;
+    }
+
+    .intro-copy .lead {
+        margin: 0 0 20px;
+        font-size: 18px;
+        line-height: 1.35;
+    }
+
+    .intro-copy p {
+        margin: 0 0 14px;
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECTS
+    ----------------------------------------------------- */
+
+    .projects-heading {
+        margin-bottom: 40px;
+    }
+
+    .projects-heading .section-label {
+        justify-content: flex-start;
+        margin-bottom: 18px;
+        font-size: 9px;
+    }
+
+    .projects-heading h2 {
+        font-size: clamp(40px, 12vw, 58px);
+        line-height: .9;
+    }
+
+    .projects-heading p {
+        font-size: 14px;
+        margin-top: 18px;
+    }
+
+    .projects-divider,
+    .projectunder-divider {
+        margin-left: 0;
+        margin-right: 0;
+        height: 1px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
+        row-gap: 0;
+
+        margin-left: 0px;
+        margin-right: 0;
+
+        padding: 0;
+    }
+
+    .project-grid::before {
+        display: none;
+    }
+
+    .project-card {
+        width: 100%;
+
+        border: 0;
+        border-bottom: 1px solid #292929;
+
+        border-radius: 0;
+    }
+
+    .project-card:last-child {
+        border-bottom: 0;
+    }
+
+    .project-card:hover {
+        transform: none;
+    }
+
+    .project-image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-label {
+        left: 16px;
+        top: 16px;
+
+        gap: 9px;
+
+        font-size: 8px;
+        letter-spacing: .14em;
+    }
+
+    .project-info {
+        padding: 22px 15px 28px;
+
+        gap: 18px;
+    }
+
+    .project-tag {
+        font-size: 9px;
+        margin-bottom: 8px;
+    }
+
+    .project-info h3 {
+        font-size: clamp(34px, 10vw, 46px);
+        line-height: .9;
+    }
+
+    .project-details {
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .project-details p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .project-details .text-link {
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       HOW IT WORKS
+    ----------------------------------------------------- */
+
+    .split-heading {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(40px, 11vw, 58px);
+
+    }
+
+    .split-heading > p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+
+    .step,
+    .step:nth-child(2),
+    .step:nth-child(3) {
+        min-height: auto;
+
+        padding: 30px 15px 42px;
+
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 1px solid var(--border);
+
+        margin-right: 0;
+    }
+
+    .step:last-child {
+        border-bottom: 0;
+    }
+
+    .step-number {
+        margin-bottom: 28px;
+    }
+
+    .step h3 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .step p {
+        max-width: 100%;
+        font-size: 13px;
+    }
+
+    /* -----------------------------------------------------
+       WHY TEENZIO
+    ----------------------------------------------------- */
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card,
+    .why-card.featured {
+        grid-column: auto;
+
+        min-height: 240px;
+
+        padding: 26px;
+    }
+
+    .why-card span {
+        margin-bottom: 55px;
+    }
+
+    .why-card h3 {
+        font-size: 26px;
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+    ----------------------------------------------------- */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about .section-label {
+        position: static;
+        left: auto;
+        top: auto;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-content h2 {
+        margin-bottom: 35px;
+        font-size: clamp(38px, 11vw, 56px);
+    }
+
+    .about-content > p {
+        max-width: 100%;
+        margin-left: 0;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .about-statement {
+        margin-top: 55px;
+        margin-left: 0;
+        padding-top: 22px;
+    }
+
+    .about-statement span {
+        font-size: 10px;
+        margin-bottom: 16px;
+    }
+
+    .about-statement strong {
+        font-size: clamp(42px, 12vw, 65px);
+    }
+
+
+    /* -----------------------------------------------------
+       CONTACT
+    ----------------------------------------------------- */
+
+    .contact-title {
+        margin-top: 25px;
+        margin-bottom: 28px;
+
+        font-size: clamp(46px, 13vw, 65px);
+    }
+
+    .contact-intro {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.75;
+        margin-bottom: 30px;
+    }
+
+    .contact-direct {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 0 22px;
+
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+
+    .contact-direct a {
+        gap: 10px;
+        padding: 16px 0;
+    }
+
+    .contact-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .contact-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .contact-direct-text small {
+        font-size: 8px;
+    }
+
+    .contact-direct-text strong {
+        font-size: 12px;
+    }
+
+    .contact-direct-text strong b {
+        font-size: 11px;
+    }
+
+    .contact-form {
+        padding-top: 45px;
+    }
+
+    .contact-form::before {
+        left: 0;
+        width: 100%;
+    }
+
+    .contact-form-label {
+        font-size: 12px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form label {
+        margin-bottom: 28px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+
+        padding: 55px 0;
+    }
+
+    .footer-contact {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        min-height: 100px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECT DETAIL PAGES
+    ----------------------------------------------------- */
+
+    .project-hero {
+        min-height: 82svh;
+
+        padding: 120px 0 60px;
+
+        align-items: flex-end;
+    }
+
+    .project-hero::before {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,.45) 0%,
+                rgba(0,0,0,.78) 48%,
+                rgba(0,0,0,.94) 100%
+            );
+    }
+
+    .project-hero-content {
+        width: 100%;
+    }
+
+    .back-link {
+        font-size: 9px;
+        margin-bottom: 30px;
+    }
+
+    .project-hero .section-label {
+        font-size: 9px !important;
+        line-height: 1.5;
+        letter-spacing: .12em;
+    }
+
+    .project-hero h1 {
+        max-width: 100%;
+
+        font-size: clamp(48px, 14vw, 72px);
+
+        line-height: .86;
+    }
+
+    .project-hero p {
+        max-width: 100%;
+
+        margin-top: 25px;
+
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .project-section {
+        padding: 75px 0;
+    }
+
+    .project-two-col {
+        display: block;
+    }
+
+    .project-about-content > .section-label {
+        margin-bottom: 28px;
+        font-size: 9px !important;
+    }
+
+    .project-two-col h2 {
+        font-size: clamp(40px, 12vw, 58px);
+        line-height: .88;
+        margin-bottom: 28px;
+    }
+
+    .project-two-col p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .project-feature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+        margin-top: 45px;
+    }
+
+    .feature-box {
+        min-height: auto;
+
+        padding: 28px 22px;
+
+        border-left: 1px solid var(--border);
+        border-right: 1px solid var(--border);
+        border-bottom: 0;
+    }
+
+    .feature-box:first-child {
+        border-top: 1px solid var(--border);
+    }
+
+    .feature-box:last-child {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .feature-box h3 {
+        font-size: 25px;
+        margin: 40px 0 14px;
+    }
+
+    .feature-box p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .project-cta {
+        text-align: center;
+    }
+
+    .project-cta h2 {
+        font-size: clamp(42px, 12vw, 62px);
+    }
+
+    .project-cta p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .project-cta .button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+
+    /* -----------------------------------------------------
+       PROJECT PAGE VISUALS
+    ----------------------------------------------------- */
+
+    .focal-billboard {
+        right: 4%;
+        width: 60%;
+    }
+
+    .focal-glow {
+        width: 80%;
+        right: -15%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   430px and below
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .hero-title {
+        font-size: clamp(44px, 14vw, 62px);
+    }
+
+    .hero::before {
+        width: 190px;
+        height: 190px;
+        right: -70px;
+    }
+
+    .intro-content {
+        padding: 38px 20px;
+    }
+
+    .projects-heading h2 {
+        font-size: clamp(38px, 12vw, 54px);
+    }
+
+    .project-info {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact-direct {
+        gap: 0 15px;
+    }
+
+    .contact-direct a {
+        gap: 8px;
+    }
+
+    .contact-direct-text strong {
+        font-size: 11px;
+    }
+
+    .project-hero {
+        min-height: 78svh;
+    }
+
+    .project-hero h1 {
+        font-size: clamp(44px, 13vw, 60px);
+    }
+
+    .feature-box {
+        padding: 25px 18px;
+    }
+}
+
+
+@media (max-width: 680px) {
+
+    .motion-hero {
+        background-image: url("../images/motion-mobile.png");
+    }
+
+    .vista-hero {
+        background-image: url("../images/vista-mobile.png");
+    }
+
+    .digital-hero {
+        background-image: url("../images/digi-mobile.png");
+    }
+
+}
+ /*vist - mobile */
+@media (max-width: 680px) {
+
+    .vista-hero h1 {
+        font-size: 50px !important;
+        line-height: .88;
+    }
+
+    .project-hero-content {
+        margin-left: 15px;
+    }
+
+}
+
+/* VISTA — DESKTOP */
+@media (min-width: 901px) {
+    .vista-hero h1 {
+        font-size: 110px !important;
+    }
+}
+
+
+
+
+@media (max-width: 680px) {
+
+    .site-header {
+        z-index: 9999;
+    }
+
+    .nav-menu {
+        z-index: 9998;
+    }
+
+    .menu-toggle {
+        position: relative;
+        z-index: 10000;
+    }
+
+}

@@ -1,0 +1,78 @@
+/* WHY */
+.why {
+    background: #f1f1ed;
+    color: var(--black);
+}
+
+.why .section-label {
+    color: #777;
+    font-size: 11px;
+}
+
+.why .section-label span:first-child {
+    color: #777;
+}
+
+.why .section-heading h2 span {
+    color: #777;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #cfcfca;
+    border: 1px solid #cfcfca;
+}
+
+.why-card {
+    min-height: 290px;
+    padding: 30px;
+    background: #f1f1ed;
+    transition: background .3s ease, color .3s ease, transform .3s var(--ease);
+}
+
+.why-card:hover {
+    background: var(--black);
+    color: var(--white);
+    transform: translateY(-4px);
+}
+
+.why-card span {
+    display: block;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: .15em;
+    margin-bottom: 70px;
+}
+
+.why-card:hover span {
+    color: var(--yellow);
+}
+
+.why-card h3 {
+    font-family: var(--heading);
+    font-size: 28px;
+    line-height: .92;
+    letter-spacing: -.04em;
+    margin-bottom: 18px;
+}
+
+.why-card p {
+    max-width: 300px;
+    color: #70706b;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.why-card:hover p {
+    color: #aaa;
+}
+
+.why-card.featured {
+    background: var(--yellow);
+}
+
+.why-card.featured:hover {
+    background: var(--black);
+}
